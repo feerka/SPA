@@ -1,0 +1,14 @@
+<h1>Buscando:
+    <small>{{ termino }} </small>
+</h1>
+<hr>
+<div class="row" *ngIf="heroes.length == 0">
+    <div class="col-md-12">
+        <div class=" alert alert-dark " role="alert ">
+            No existe el Súperheroe {{termino}}
+        </div>
+    </div>
+</div>
+<div class="card-columns">
+    <app-heroe-tarjeta *ngFor="let heroe of heroes;" [heroe]="heroe" [idx]="heroe.idx"></app-heroe-tarjeta>
+</div>
